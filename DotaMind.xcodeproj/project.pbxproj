@@ -3,20 +3,54 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 90;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		D0D0A000000000000000000C /* DotaMindWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D0D0A0000000000000000001 /* DotaMindWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0D0A000000000000000000E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C478D9682E4D4169003543C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0D0A0000000000000000004;
+			remoteInfo = DotaMindWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D0D0A000000000000000000B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				D0D0A000000000000000000C /* DotaMindWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C478D9702E4D4169003543C8 /* DotaMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotaMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D0A0000000000000000001 /* DotaMindWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DotaMindWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
 		C478D9822E4D416A003543C8 /* Exceptions for "DotaMind" folder in "DotaMind" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Application/Info.plist,
 			);
 			target = C478D96F2E4D4169003543C8 /* DotaMind */;
+		};
+		D0D0A0000000000000000003 /* Exceptions for "DotaMindWidget" folder in "DotaMindWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = D0D0A0000000000000000004 /* DotaMindWidgetExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -29,15 +63,26 @@
 			path = DotaMind;
 			sourceTree = "<group>";
 		};
+		D0D0A0000000000000000002 /* DotaMindWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D0D0A0000000000000000003 /* Exceptions for "DotaMindWidget" folder in "DotaMindWidgetExtension" target */,
+			);
+			path = DotaMindWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C478D96D2E4D4169003543C8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D0A0000000000000000006 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -46,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				C478D9722E4D4169003543C8 /* DotaMind */,
+				D0D0A0000000000000000002 /* DotaMindWidget */,
 				C478D9712E4D4169003543C8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				C478D9702E4D4169003543C8 /* DotaMind.app */,
+				D0D0A0000000000000000001 /* DotaMindWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,20 +115,38 @@
 				C478D96C2E4D4169003543C8 /* Sources */,
 				C478D96D2E4D4169003543C8 /* Frameworks */,
 				C478D96E2E4D4169003543C8 /* Resources */,
+				D0D0A000000000000000000B /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D0D0A000000000000000000D /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				C478D9722E4D4169003543C8 /* DotaMind */,
 			);
 			name = DotaMind;
-			packageProductDependencies = (
-			);
 			productName = DotaMind;
 			productReference = C478D9702E4D4169003543C8 /* DotaMind.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D0D0A0000000000000000004 /* DotaMindWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0D0A000000000000000000A /* Build configuration list for PBXNativeTarget "DotaMindWidgetExtension" */;
+			buildPhases = (
+				D0D0A0000000000000000005 /* Sources */,
+				D0D0A0000000000000000006 /* Frameworks */,
+				D0D0A0000000000000000007 /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				D0D0A0000000000000000002 /* DotaMindWidget */,
+			);
+			name = DotaMindWidgetExtension;
+			productName = DotaMindWidgetExtension;
+			productReference = D0D0A0000000000000000001 /* DotaMindWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -96,23 +161,28 @@
 					C478D96F2E4D4169003543C8 = {
 						CreatedOnToolsVersion = 16.4;
 					};
+					D0D0A0000000000000000004 = {
+						CreatedOnToolsVersion = 26.2;
+					};
 				};
 			};
 			buildConfigurationList = C478D96B2E4D4169003543C8 /* Build configuration list for PBXProject "DotaMind" */;
-			developmentRegion = en;
+			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ru,
 				Base,
 			);
 			mainGroup = C478D9672E4D4169003543C8;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
+			preferredProjectObjectVersion = 90;
 			productRefGroup = C478D9712E4D4169003543C8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C478D96F2E4D4169003543C8 /* DotaMind */,
+				D0D0A0000000000000000004 /* DotaMindWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -120,25 +190,39 @@
 /* Begin PBXResourcesBuildPhase section */
 		C478D96E2E4D4169003543C8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D0A0000000000000000007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C478D96C2E4D4169003543C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D0A0000000000000000005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D0D0A000000000000000000D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0D0A0000000000000000004 /* DotaMindWidgetExtension */;
+			targetProxy = D0D0A000000000000000000E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		C478D9842E4D416A003543C8 /* Debug */ = {
+		C478D9842E4D416A003543C8 /* Debug configuration for PBXNativeTarget "DotaMind" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -147,12 +231,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RU9CMPCL3A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DotaMind/Info.plist;
+				INFOPLIST_FILE = DotaMind/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -161,12 +245,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = spqtoo.DotaMind;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		C478D9852E4D416A003543C8 /* Release */ = {
+		C478D9852E4D416A003543C8 /* Release configuration for PBXNativeTarget "DotaMind" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -174,13 +258,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RU9CMPCL3A;
+				EXCLUDED_SOURCE_FILE_NAMES = "demo_*";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DotaMind/Info.plist;
+				INFOPLIST_FILE = DotaMind/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -189,12 +274,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = spqtoo.DotaMind;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		C478D9862E4D416A003543C8 /* Debug */ = {
+		C478D9862E4D416A003543C8 /* Debug configuration for PBXProject "DotaMind" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -258,7 +343,7 @@
 			};
 			name = Debug;
 		};
-		C478D9872E4D416A003543C8 /* Release */ = {
+		C478D9872E4D416A003543C8 /* Release configuration for PBXProject "DotaMind" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -315,25 +400,81 @@
 			};
 			name = Release;
 		};
+		D0D0A0000000000000000008 /* Debug configuration for PBXNativeTarget "DotaMindWidgetExtension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RU9CMPCL3A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DotaMindWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DotaMind;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = spqtoo.DotaMind.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D0D0A0000000000000000009 /* Release configuration for PBXNativeTarget "DotaMindWidgetExtension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RU9CMPCL3A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DotaMindWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DotaMind;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = spqtoo.DotaMind.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		C478D96B2E4D4169003543C8 /* Build configuration list for PBXProject "DotaMind" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C478D9862E4D416A003543C8 /* Debug */,
-				C478D9872E4D416A003543C8 /* Release */,
+				C478D9862E4D416A003543C8 /* Debug configuration for PBXProject "DotaMind" */,
+				C478D9872E4D416A003543C8 /* Release configuration for PBXProject "DotaMind" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		C478D9832E4D416A003543C8 /* Build configuration list for PBXNativeTarget "DotaMind" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C478D9842E4D416A003543C8 /* Debug */,
-				C478D9852E4D416A003543C8 /* Release */,
+				C478D9842E4D416A003543C8 /* Debug configuration for PBXNativeTarget "DotaMind" */,
+				C478D9852E4D416A003543C8 /* Release configuration for PBXNativeTarget "DotaMind" */,
 			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0D0A000000000000000000A /* Build configuration list for PBXNativeTarget "DotaMindWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D0A0000000000000000008 /* Debug configuration for PBXNativeTarget "DotaMindWidgetExtension" */,
+				D0D0A0000000000000000009 /* Release configuration for PBXNativeTarget "DotaMindWidgetExtension" */,
+			);
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */

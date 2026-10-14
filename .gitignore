@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Xcode: личные настройки и сборки
+xcuserdata/
+DerivedData/
+build/
+*.xcuserstate
+
+# Временные файлы скрипта офлайн-снимка
+*.raw
+
+# Старая UIKit-версия (до переписывания на SwiftUI) — осталась в истории git
+Legacy-UIKit/
+
+# Заметки для Claude Code — только локально
+CLAUDE.md
